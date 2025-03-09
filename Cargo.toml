@@ -15,6 +15,7 @@ cosmwasm-schema   = "2.2.0"
 cosmwasm-std      = "2.2.0"
 cw-address-like   = { path = "./packages/address-like" }
 cw-ownable-derive = { path = "./packages/ownable/derive" }
+cw-ownable        = { path = "./packages/ownable" }
 cw-storage-plus   = "2.0"
 cw-utils          = { git = "https://github.com/cryptogopniks/cw-minus", branch = "v2.2.0"}
 proc-macro2       = "1"
