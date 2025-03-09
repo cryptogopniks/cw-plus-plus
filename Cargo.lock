@@ -438,12 +438,14 @@ dependencies = [
 
 [[package]]
 name = "cw-utils"
-version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "07dfee7f12f802431a856984a32bce1cb7da1e6c006b5409e3981035ce562dec"
+version = "2.2.0"
+source = "git+https://github.com/cryptogopniks/cw-minus?branch=v2.2.0#695bb6b7d0e4102c0a4a4c6de5ce6de1e168b460"
 dependencies = [
+ "ahash",
  "cosmwasm-schema",
  "cosmwasm-std",
+ "curve25519-dalek",
+ "num-bigint",
  "schemars",
  "serde",
  "thiserror",

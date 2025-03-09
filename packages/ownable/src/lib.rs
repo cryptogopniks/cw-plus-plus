@@ -344,7 +344,7 @@ impl<T: AddressLike> Ownership<T> {
     }
 }
 
-fn none_or<T: Display>(or: Option<&T>) -> String {
+pub fn none_or<T: Display>(or: Option<&T>) -> String {
     or.map_or_else(|| "none".to_string(), |or| or.to_string())
 }
 
@@ -354,16 +354,15 @@ fn none_or<T: Display>(or: Option<&T>) -> String {
 
 #[cfg(test)]
 mod tests {
-    use cosmwasm_std::{testing::{mock_dependencies, MockApi}, Timestamp};
+    use cosmwasm_std::{
+        testing::{mock_dependencies, MockApi},
+        Timestamp,
+    };
 
     use super::*;
 
     fn mock_addresses(api: &MockApi) -> [Addr; 3] {
-        [
-            api.addr_make("larry"),
-            api.addr_make("jake"),
-            api.addr_make("pumpkin"),
-        ]
+        [api.addr_make("larry"), api.addr_make("jake"), api.addr_make("pumpkin")]
     }
 
     fn mock_block_at_height(height: u64) -> BlockInfo {
